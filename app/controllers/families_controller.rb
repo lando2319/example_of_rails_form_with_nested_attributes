@@ -25,6 +25,7 @@ class FamiliesController < ApplicationController
   # GET /families/new.json
   def new
     @family = Family.new
+    @family.people.build
 
     respond_to do |format|
       format.html # new.html.erb
